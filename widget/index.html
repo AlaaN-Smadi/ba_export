@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="../../../styles/material-icons.css" />
+  <link href="./style/style.css" rel="stylesheet" />
+
+
+  <script src="../../../scripts/buildfire.min.js"></script>
+  <script src="../../../scripts/buildfire/services/publicFiles/publicFiles.js"></script>
+  <script src="../../../scripts/buildfire/services/fileSystem/fileManager.js"></script>
+
+  <script src="./js/apiConfig.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-group">
+      <div class="left-label"><label for="spAppId">App ID: <span class="text-danger">*</span></label></div>
+      <div><input type="text" class="form-control" id="spAppId" placeholder="App ID" maxlength="80">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="left-label"><label for="spAdminEmail">Email: <span class="text-danger">*</span></label></div>
+      <div><input type="email" class="form-control" id="spAdminEmail" placeholder="Email" maxlength="80">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="left-label"><label for="item-data-type">Type: <span class="text-danger">*</span></label></div>
+      <div>
+        <div id="item-data-type" class="btn-group margin-right-fifteen">
+          <button type="button" id="input-type-btn" class="btn btn-default dropdown-toggle select-type" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Data Type
+            <span class="material-icons material-icons-outlined">expand_more</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a id="user-data">Users</a></li>
+            <li><a id="locations-data">Locations</a></li>
+            <li><a id="event-data">Events</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-success" type="button" id="export-data">Export Data</button>
+  </div>
+
+</body>
+
+<script>
+  window.onload = () => {
+    init();
+  }
+</script>
+
+</html>
